@@ -8,9 +8,9 @@ function App() {
   return (
     <>
       {/* Mobile Section */}
-      <div className="h-screen w-full flex items-center justify-center flex-col overflow-hidden  md:hidden">
+      <div className="h-screen w-full flex  items-center justify-center flex-col overflow-hidden  md:hidden">
           <Background />
-
+  
       </div>
 
       {/* Desktop Section */}

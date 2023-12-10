@@ -1,9 +1,10 @@
 import logo from "/Background/logo.png";
 import back1 from "/Background/1.jpg";
 import back2 from "/Background/2.jpg";
-
 import Product from "./Product";
 import ContactBox from "./ContactBox";
+import Slider from "./Slider";
+import Products from "./Products";
 
 
 function Background() {
@@ -12,25 +13,31 @@ function Background() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       };
+
+
+
+
   return (
-         <div className=" w-full bg-red-400 max-w-[460px] flex flex-col justify-center items-center  h-full   " style={backgroundStyle}>
+         <div className=" w-full bg-red-400 max-w-[460px] flex flex-col relative  items-center  h-full " style={backgroundStyle}>
                 <img
                 src={logo}
                 className=" absolute top-20  left-1/2 transform -translate-x-1/2 -translate-y-1/2
-                bg-white rounded-full w-20 h-20   z-30"
+                  w-20 h-20   z-30"
                     />
             <div className="  w-full h-screen">
-                <ContactBox />
             </div>
-
-
-            <div className="  bottom-64 w-full max-w-[460px] flex justify-center items-center  space-y-4  mb-10  flex-col  ">
-            <Product />
-            <Product />
-            <Product />
-            <Product />
             
+            <div className="  w-full mb-20  ">
+                <Slider />
             </div>
+                
+            <div className="   bottom-64  h-full max-h-[400px] overflow-y-scroll scrollbar-thin scrollbar-thumb-rounded-full  scrollbar-thumb-white   w-full max-w-[460px] flex justify-start pb-32  items-center  space-y-4  mb-3  flex-col  ">
+            <Products />
+
+
+
+            </div>
+            <div className=' bg-gradient-to-b from-black/5 to-black w-full h-full absolute   z-20'></div>
         </div>
   )
 }
