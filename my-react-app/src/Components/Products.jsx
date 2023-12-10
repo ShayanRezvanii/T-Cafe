@@ -1,10 +1,8 @@
-import React from 'react';
 import Product from './Product';
 import data from '../../Data/products.json'
 
 
 function Products() {
-  const products = []; 
 
 
   return (
