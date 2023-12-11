@@ -5,6 +5,7 @@ import Product from "./Product";
 import ContactBox from "./ContactBox";
 import Slider from "./Slider";
 import Products from "./Products";
+import { useEffect, useState } from "react";
 
 
 function Background() {
@@ -13,10 +14,12 @@ function Background() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       };
+    const [selectedValue, setSelectedValue] = useState("Cakes")
 
-
-
-
+    const handleChange = (newValue) => {
+      setSelectedValue(newValue)
+    }
+    console.log(selectedValue);
   return (
          <div className=" w-full bg-red-400 max-w-[460px] flex flex-col relative  items-center  h-full " style={backgroundStyle}>
                 <img
@@ -28,14 +31,11 @@ function Background() {
             </div>
             
             <div className="  w-full mb-20  ">
-                <Slider />
+                <Slider selectedValue={selectedValue} onSelectionChange={handleChange}  />
             </div>
                 
             <div className="   bottom-64  h-full max-h-[400px] overflow-y-scroll scrollbar-thin scrollbar-thumb-rounded-full  scrollbar-thumb-white   w-full max-w-[460px] flex justify-start pb-32  items-center  space-y-4  mb-3  flex-col  ">
-            <Products />
-
-
-
+            <Products selectedValue={selectedValue} />
             </div>
             <div className=' bg-gradient-to-b from-black/5 to-black w-full h-full absolute   z-20'></div>
         </div>
