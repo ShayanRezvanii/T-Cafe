@@ -1,7 +1,7 @@
 import React from 'react'
-import instagram from "/Icons/instagram-50.png"
-import call from "/Icons/call-50.png"
-import location from "/Icons/location-50.png"
+import instagram from "../../public/Icons/icons8-instagram-50.png"
+import call from "../../public/Icons/icons8-call-50.png"
+import location from "../../public/Icons/icons8-location-50.png"
 function ContactBox() {
   return (
     <div className=' bg-white rounded-r-xl w-full h-[30px] max-w-[120px] z-30 absolute top-16 flex space-x-3 justify-center items-center'>

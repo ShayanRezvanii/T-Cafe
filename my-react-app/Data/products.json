@@ -33,8 +33,69 @@
           "id": 1,
           "name": "کیک وانیلی",
           "description": "وانیل",
-          "image": "/Products/img.jpg",
+          "image": "/Products/cake-16.png",
           "price": 78
+        }
+      ]
+    },
+
+    {
+      "name": "CoolDrinks",
+      "items": [
+        {
+          "id": 5,
+          "name": "لیموناد",
+          "description": "لیمو",
+          "image": "/Products/limo.png",
+          "price": 88
+        },
+        {
+          "id": 1,
+          "name": "لیموناد",
+          "description": "لیمو",
+          "image": "/Products/limo.png",
+          "price": 88
+        },
+        {
+          "id": 2,
+          "name": "لیموناد",
+          "description": "لیمو",
+          "image": "/Products/limo.png",
+          "price": 88
+        },
+        {
+          "id": 3,
+          "name": "لیموناد",
+          "description": "لیمو",
+          "image": "/Products/limo.png",
+          "price": 88
+        }
+      ]
+    },
+
+    {
+      "name": "HotDrinks",
+      "items": [
+        {
+          "id": 1,
+          "name": "اسپرسو",
+          "description": "دبل",
+          "image": "/Products/coffe.jpg",
+          "price": 70
+        },
+        {
+          "id": 2,
+          "name": "اسپرسو",
+          "description": "سینگل",
+          "image": "/Products/coffe.jpg",
+          "price": 70
+        },
+        {
+          "id": 3,
+          "name": "کاپوچینو",
+          "description": "دبل",
+          "image": "/Products/coffe.jpg",
+          "price": 70
         }
       ]
     }

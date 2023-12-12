@@ -12,3 +12,11 @@
   body {
     /* font-family: 'Irans-Sans', sans-serif; */
   }
+
+
+  .keen-slider:not([data-keen-slider-disabled]) {
+    overflow: visible;
+  }
+
+
+  

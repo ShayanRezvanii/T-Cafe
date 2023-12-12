@@ -7,36 +7,42 @@ function Slider({ selectedValue, onSelectionChange }) {
     slideChanged() {
       console.log('Changed');
     },
-    slides: {
-      perView: 3,
-      spacing: 16,
+    breakpoints: {
+      "(min-width: 300px)": {
+        slides: { perView: 3, spacing: 10, origin:'center'  },
+        mode:'snap',
+      },
+      // "(min-width: 1000px)": {
+      //   slides: { perView: 3, spacing: 10 },
+      // },
     },
-    drag: true,
+    slides: { perView: 1 },
+    
   });
 
-  const [focusedIndex, setFocusedIndex] = useState(null);
+  const [focusedIndex, setFocusedIndex] = useState(1);
 
   const handleSlideFocus = (index) => {
     setFocusedIndex(index);
   };
+
 
   const handleSlideBlur = () => {
     setFocusedIndex(null);
   };
 
   const handleClick = (value) => {
-    // Call the onSelectionChange function with the clicked value
     onSelectionChange(value);
   };
 
   return (
     <div
       ref={sliderRef}
-      className='w-full h-[66px] flex justify-center items-center z-30 keen-slider cursor-pointer'
+      className='w-full h-[55px]   flex justify-center items-center z-30 keen-slider cursor-pointer'
     >
       <button
-        className={`keen-slider__slide rounded-xl text text-sm w-full h-[20px] bg-yellow-50 ${
-          focusedIndex === 0 ? 'focus:bg-orange-300' : ''
+        className={`keen-slider__slide   rounded-xl text text-sm w-full h-[20px] bg-yellow-50 ${
+          focusedIndex === 0 ? 'focus:bg-orange-300  mb-4  ' : ''
         } flex justify-center items-center`}
         onFocus={() => handleSlideFocus(0)}
         onBlur={handleSlideBlur}
@@ -46,8 +52,8 @@ function Slider({ selectedValue, onSelectionChange }) {
         فست فود
       </button>
       <button
-        className={`keen-slider__slide rounded-xl w-full text-sm h-[20px] bg-yellow-50 ${
-          focusedIndex === 1 ? 'focus:bg-orange-300' : ''
+        className={`keen-slider__slide rounded-xl w-full  text-sm h-[20px] bg-yellow-50 ${
+          focusedIndex === 1 ? 'focus:bg-orange-300 mb-4  bg-orange-300  ' : ''
         } flex justify-center items-center`}
         onFocus={() => handleSlideFocus(1)}
         onBlur={handleSlideBlur}
@@ -56,9 +62,10 @@ function Slider({ selectedValue, onSelectionChange }) {
       >
         کیک ها
       </button>
+      
       <button
         className={`keen-slider__slide rounded-xl w-full text-sm h-[20px] bg-yellow-50 ${
-          focusedIndex === 2 ? 'focus:bg-orange-300' : ''
+          focusedIndex === 2 ? 'focus:bg-orange-300 mb-4 ' : ''
         } flex justify-center items-center`}
         onFocus={() => handleSlideFocus(2)}
         onBlur={handleSlideBlur}
@@ -69,7 +76,7 @@ function Slider({ selectedValue, onSelectionChange }) {
       </button>
       <button
         className={`keen-slider__slide rounded-xl w-full text-sm h-[20px] bg-yellow-50 ${
-          focusedIndex === 3 ? 'focus:bg-orange-300' : ''
+          focusedIndex === 3 ? 'focus:bg-orange-300 mb-4 ' : ''
         } flex justify-center items-center`}
         onFocus={() => handleSlideFocus(3)}
         onBlur={handleSlideBlur}
