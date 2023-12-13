@@ -1,4 +1,5 @@
-import logo from "/Background/logo.png";
+// import logo from "/Background/logo.png";
+import logo from '/Background/tcafe.png'
 import back1 from "/Background/1.jpg";
 import back2 from "/Background/2.jpg";
 import Slider from "./Slider";
@@ -30,12 +31,12 @@ function Background() {
     >
       <img
         src={logo}
-        className=" absolute top-28  left-1/2 transform -translate-x-1/2 -translate-y-1/2
-                  w-20 h-20   z-30"
+        width={260}
+        height={260}
+        className=" absolute top-28  left-1/2 transform m-4 -translate-x-1/2 
+                  text-white object-cover  z-30"
       />
       <div className="  w-full h-screen"></div>
-
-
 
       <div className="  w-full mb-20   ">
         <Slider

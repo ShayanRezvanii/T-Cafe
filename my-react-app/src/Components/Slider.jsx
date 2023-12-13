@@ -12,9 +12,7 @@ function Slider({ selectedValue, onSelectionChange }) {
         slides: { perView: 3, spacing: 10, origin:'center'  },
         mode:'snap',
       },
-      // "(min-width: 1000px)": {
-      //   slides: { perView: 3, spacing: 10 },
-      // },
+
     },
     slides: { perView: 1 },
     
