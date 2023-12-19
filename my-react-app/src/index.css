@@ -13,9 +13,9 @@
     /* font-family: 'Irans-Sans', sans-serif; */
   }
 
-
-  .keen-slider:not([data-keen-slider-disabled]) {
-    overflow: visible;
+  .swiper-slide-active {
+    background-color: rgb(214, 173, 98);
+    border-radius: 12px;
   }
 
 

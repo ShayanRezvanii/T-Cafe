@@ -8,6 +8,7 @@ function Products({ selectedValue }) {
   const filteredCategories = data.categories.filter(
     (category) => category.name === selectedValue
   );
+  console.log(filteredCategories);
 
   const filteredItems =
     filteredCategories.length > 0 ? filteredCategories[0].items : [];
@@ -32,7 +33,7 @@ function Products({ selectedValue }) {
           <PopUp closeButton={closePopupHandler} selectedProduct={dataProduct}  />
         </div>
       ) : null}
-      <div className=' bg-gradient-to-t from-black to-black/0 w-full max-w-[360px] h-[100px] bottom-2 fixed z-30'></div>
+      <div className=' bg-gradient-to-tc from-black to-black/0 w-full max-w-[360px] h-[100px] bottom-0 fixed z-30'></div>
     </div>
   );
 }
