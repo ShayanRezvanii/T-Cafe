@@ -5,7 +5,7 @@ import back2 from "/Background/2.jpg";
 import Slider from "./Slider";
 import Products from "./Products";
 import { useEffect, useState } from "react";
-
+import ContactBox from './ContactBox';
 import PopUp from "./PopUp";
 
 function Background() {
@@ -33,10 +33,14 @@ function Background() {
         src={logo}
         width={260}
         height={260}
-        className=" absolute top-10 md:top-28  left-1/2 transform m-4 -translate-x-1/2 
+        className=" absolute top-16 md:top-28  left-1/2 transform m-4 -translate-x-1/2 
                   text-white object-cover  z-30"
       />
-      <div className="  w-full h-screen"></div>
+
+  
+      <div className="  w-full h-screen">
+      <ContactBox />
+      </div>
 
       <div className="  w-full mb-20   ">
         <Slider
