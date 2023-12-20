@@ -9,9 +9,10 @@ import { useEffect, useState } from "react";
 import PopUp from "./PopUp";
 
 function Background() {
-  const [selectedValue, setSelectedValue] = useState("Cakes");
-  
-  
+  const [selectedValue, setSelectedValue] = useState();
+  useEffect(()=> {
+    setSelectedValue(0)
+  },[])
 
   const backgroundStyle = {
     backgroundImage: `url(${back1})`,

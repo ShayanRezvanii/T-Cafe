@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 function Slider({ selectedValue, onSelectionChange }) {
   const [details, setDetails] = useState(null);
   const swipe = useSwiper()
-  const [focusedIndex, setFocusedIndex] = useState(1);
+  const [focusedIndex, setFocusedIndex] = useState(0);
   const handleSlideFocus = (index) => {
     setFocusedIndex(index);
   };
@@ -20,6 +20,10 @@ function Slider({ selectedValue, onSelectionChange }) {
     setFocusedIndex(null);
   };
 
+  useEffect(()=>{
+    onSelectionChange(focusedIndex)
+  },[focusedIndex])
+  
   const handleClick = (value) => {
     onSelectionChange(value);
 
@@ -34,10 +38,12 @@ function Slider({ selectedValue, onSelectionChange }) {
       slideToClickedSlide={true}
       onActiveIndexChange={(index)=> {
         // setFocusedIndex(index.activeIndex)
-        console.log(index.activeIndex);
+        setFocusedIndex(index.activeIndex)
+
       }}
+
       spaceBetween={40}
-      loop={true}
+      loop={false}
       coverflowEffect={{
         rotate: 0,
         stretch: 0,
@@ -60,7 +66,7 @@ function Slider({ selectedValue, onSelectionChange }) {
             onFocus={() => handleSlideFocus(1)}
             onBlur={handleSlideBlur}
             tabIndex="0"
-            onClick={() => handleClick("Cakes")}
+            onClick={() => handleClick(focusedIndex)}
           >
             کیک ها
           </div>
@@ -77,7 +83,7 @@ function Slider({ selectedValue, onSelectionChange }) {
             onFocus={() => handleSlideFocus(0)}
             onBlur={handleSlideBlur}
             tabIndex="0"
-            onClick={() => handleClick("FastFoods")}
+            onClick={() => handleClick(focusedIndex)}
           >
             فست فود
           </div>
@@ -94,7 +100,7 @@ function Slider({ selectedValue, onSelectionChange }) {
             onFocus={() => handleSlideFocus(2)}
             onBlur={handleSlideBlur}
             tabIndex="0"
-            onClick={() => handleClick("CoolDrinks")}
+            onClick={() => handleClick(focusedIndex)}
           >
             نوشیدنی های سرد
           </div>
@@ -110,7 +116,7 @@ function Slider({ selectedValue, onSelectionChange }) {
             onFocus={() => handleSlideFocus(3)}
             onBlur={handleSlideBlur}
             tabIndex="0"
-            onClick={() => handleClick("HotDrinks")}
+            onClick={() => handleClick(focusedIndex)}
           >
             نوشیدنی های گرم
           </div>

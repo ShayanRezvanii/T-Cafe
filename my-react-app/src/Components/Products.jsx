@@ -4,11 +4,9 @@ import PopUp from './PopUp';
 import { useState } from 'react';
 function Products({ selectedValue }) {
   const [dataProduct, setDataProduct] = useState(null)
-
   const filteredCategories = data.categories.filter(
     (category) => category.name === selectedValue
   );
-  console.log(filteredCategories);
 
   const filteredItems =
     filteredCategories.length > 0 ? filteredCategories[0].items : [];

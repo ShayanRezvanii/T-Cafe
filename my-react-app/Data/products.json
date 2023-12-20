@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "name": "FastFoods",
+      "name": 1,
       "items": [
         {
           "id": 1,
@@ -26,8 +26,9 @@
         }
       ]
     },
+
     {
-      "name": "Cakes",
+      "name": 0,
       "items": [
         {
           "id": 1,
@@ -40,7 +41,7 @@
     },
 
     {
-      "name": "CoolDrinks",
+      "name": 2,
       "items": [
         {
           "id": 5,
@@ -74,7 +75,7 @@
     },
 
     {
-      "name": "HotDrinks",
+      "name": 3,
       "items": [
         {
           "id": 1,
