@@ -3,7 +3,7 @@ import Main from "./Components/Logo";
 import Logo from "./Components/Logo";
 import Background from "./Components/Background";
 import Product from "./Components/Product";
-import Slider from "./Components/Slider";
+import Slider from "./Components/Mobile/Slider";
 function App() {
   return (
     <>
@@ -14,7 +14,9 @@ function App() {
       </div>
 
       {/* Desktop Section */}
-      <div className="hidden md:block"></div>
+      <div className="hidden md:block ">
+          <Slider />
+      </div>
     </>
   );
 }

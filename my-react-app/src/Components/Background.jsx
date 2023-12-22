@@ -26,7 +26,7 @@ function Background() {
 
   return (
     <div
-      className=" w-full bg-red-400 max-w-[460px] flex flex-col relative  items-center  h-full "
+      className=" w-full bg-red-400 max-w-[460px] flex flex-col relative  items-center overflow-hidden  h-screen "
       style={backgroundStyle}
     >
       <img
