@@ -3,6 +3,11 @@ import { SwiperSlide, Swiper, useSwiper } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import coffee from "/Products/Coffee-Beans.jpg";
 import NextButton from "./NextButton";
+import Products from "../Products";
+import Product from "../Product";
+import data from '../../../Data/products.json'
+import ProductsDesktop from "./ProductsDesktop";
+
 function Slider() {
   const swiper = useSwiper()
 
@@ -12,9 +17,11 @@ function Slider() {
       <Swiper
         className=" w-full h-screen "
         direction={"vertical"}
+        allowTouchMove={false}
         pagination={{
           clickable: true,
         }}
+
         modules={[Pagination]}
       >
         <SwiperSlide>
@@ -30,12 +37,24 @@ function Slider() {
           </div>
 
          </SwiperSlide>
+
         <SwiperSlide>
-          <img src={coffee} className=" w-full h-full" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={coffee} className=" w-full h-full" />
-        </SwiperSlide>
+            <div className=' w-full h-full flex'>
+        <div className=' flex flex-col  w-full h-full'>
+            <div className=' text-2xl bg-yellow-300 w-full flex justify-center items-center max-h-[170px] h-full'>
+              LOGO
+            </div>
+            <div className=' bg-red-300 w-full  h-full'>
+            <ProductsDesktop />
+                
+            </div>
+
+        </div>
+        <div className=' bg-green-300 w-full h-full'></div>
+
+    </div>
+        </SwiperSlide>  
+
       </Swiper>
     </>
   );
