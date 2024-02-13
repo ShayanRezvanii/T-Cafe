@@ -1,8 +1,5 @@
 import "./App.css";
-import Main from "./Components/Logo";
-import Logo from "./Components/Logo";
 import Background from "./Components/Background";
-import Product from "./Components/Product";
 import Slider from "./Components/Desktop/Slider";
 function App() {
   return (
