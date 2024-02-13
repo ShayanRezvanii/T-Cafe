@@ -1,14 +1,8 @@
-import React, { useEffect } from "react";
-import { SwiperSlide, Swiper, useSwiper } from "swiper/react";
+import { SwiperSlide, Swiper } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import coffee from "/Products/Coffee-Beans.jpg";
 import NextButton from "./NextButton";
-import pizza from "/Products/pizza.png";
 import ProductsDesktop from "./ProductsDesktop";
 import Logo from "../../../public/Background/tcafe.png";
-import coffeeProduct from '../../../public/Products/coffe.jpg'
-import cake from '../../../public/Products/cake-16.png'
-import limo from '../../../public/Products/limo.png'
 import {
   MouseParallaxContainer,
   MouseParallaxChild,
@@ -28,7 +22,7 @@ function Slider() {
         modules={[Pagination]}
       >
         <SwiperSlide>
-          <img src={coffee} className=" w-full h-full" />
+          <img src={''} className=" w-full h-full" />
           <div className=" bg-black flex flex-col h-screen top-0 bg-black/30  absolute w-full">
             <div className=" w-full h-20 py-16 px-20">
               <h1 className=" text-[140px] text-right text-yellow-900">
@@ -65,7 +59,7 @@ function Slider() {
               className=" w-full flex object-cover justify-center items-center bg-white h-full"
             >
               <MouseParallaxChild factorX={0.3} factorY={0.5}>
-                <img src={coffeeProduct} className=" object-cover w-[600px] h-[600px]" />
+                <img src={""} className=" object-cover w-[600px] h-[600px]" />
               </MouseParallaxChild>
             </MouseParallaxContainer>
           </div>
@@ -78,7 +72,7 @@ function Slider() {
               <div className=" text-2xl  w-full flex justify-center items-center h-[170px]">
                 <div>
                   <img
-                    src={Logo}
+                    src={""}
                     width={230}
                     height={230}
                     className=" object-cover "
@@ -95,7 +89,7 @@ function Slider() {
               className=" w-full flex object-cover justify-center items-center bg-white h-full"
             >
               <MouseParallaxChild factorX={0.3} factorY={0.5}>
-                <img src={pizza} className=" object-cover w-[600px] h-[600px]" />
+                <img src={""} className=" object-cover w-[600px] h-[600px]" />
               </MouseParallaxChild>
             </MouseParallaxContainer>
           </div>
@@ -109,7 +103,7 @@ function Slider() {
               <div className=" text-2xl  w-full flex justify-center items-center h-[170px]">
                 <div>
                   <img
-                    src={Logo}
+                    src={""}
                     width={230}
                     height={230}
                     className=" object-cover "
@@ -126,7 +120,7 @@ function Slider() {
               className=" w-full flex object-cover justify-center items-center bg-white h-full"
             >
               <MouseParallaxChild factorX={0.3} factorY={0.5}>
-                <img src={cake} className=" object-cover w-[600px] h-[600px]" />
+                <img src={""} className=" object-cover w-[600px] h-[600px]" />
               </MouseParallaxChild>
             </MouseParallaxContainer>
           </div>
@@ -138,7 +132,7 @@ function Slider() {
               <div className=" text-2xl  w-full flex justify-center items-center h-[170px]">
                 <div>
                   <img
-                    src={Logo}
+                    src={""}
                     width={230}
                     height={230}
                     className=" object-cover "
@@ -155,7 +149,7 @@ function Slider() {
               className=" w-full flex object-cover justify-center items-center bg-white h-full"
             >
               <MouseParallaxChild factorX={0.3} factorY={0.5}>
-                <img src={limo} className=" object-cover w-[600px] h-[600px]" />
+                <img src={""} className=" object-cover w-[600px] h-[600px]" />
               </MouseParallaxChild>
             </MouseParallaxContainer>
           </div>

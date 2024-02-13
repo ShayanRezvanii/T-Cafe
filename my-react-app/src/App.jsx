@@ -8,13 +8,13 @@ function App() {
   return (
     <>
       {/* Mobile Section */}
-      <div className="h-full  w-full flex  items-center justify-center sm:hidden flex-col overflow-hidden">
+      <div className="h-full  w-full flex  items-center justify-center sm:hidden flex-col overflow-hidden ">
           <Background />
     
       </div>
 
       {/* Desktop Section */}
-      <div className="hidden md:block ">
+      <div className="hidden ">
           <Slider />
       </div>
     </>

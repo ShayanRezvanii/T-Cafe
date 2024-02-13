@@ -26,7 +26,7 @@ function Products({ selectedValue }) {
         <Product key={item.id} {...item}  openModalHandler={openModalHandler} />
       ))}
        {close ? (
-        <div className=" bg-black/80 max-w-[460px]  fixed  right-0 left-0 bottom-0 flex justify-center items-center z-40 w-full  h-screen  ">
+        <div className=" bg-black/80   fixed  right-0 left-0 bottom-0 flex justify-center items-center z-40 w-full  h-screen  ">
           <PopUp closeButton={closePopupHandler} selectedProduct={dataProduct}  />
         </div>
       ) : null}

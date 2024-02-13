@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+
+import  { useState, useEffect } from "react";
 import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react.es";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -34,7 +34,8 @@ function Slider({ selectedValue, onSelectionChange }) {
       className="z-30 cursor-pointer "
       effect={"coverflow"}
       centeredSlides={true}
-      slidesPerView={2}
+      slidesPerView={1.8}
+      spaceBetween={55}
       slideToClickedSlide={true}
       onActiveIndexChange={(index)=> {
         // setFocusedIndex(index.activeIndex)
@@ -42,8 +43,6 @@ function Slider({ selectedValue, onSelectionChange }) {
 
       }}
 
-      spaceBetween={40}
-      loop={false}
       coverflowEffect={{
         rotate: 0,
         stretch: 0,
@@ -62,13 +61,13 @@ function Slider({ selectedValue, onSelectionChange }) {
           <div
             className={` rounded-xl w-full outline-none   text-sm h-[56px] bg-yellow-50  ${
               isActive ?  "swiper-slide-active   " : "  "
-            } flex justify-center items-center`}
+            } flex items-center justify-center `}
             onFocus={() => handleSlideFocus(1)}
             onBlur={handleSlideBlur}
             tabIndex="0"
             onClick={() => handleClick(focusedIndex)}
           >
-            کیک ها
+           دسر و شیرینی
           </div>
         )}
       </SwiperSlide>
@@ -85,7 +84,7 @@ function Slider({ selectedValue, onSelectionChange }) {
             tabIndex="0"
             onClick={() => handleClick(focusedIndex)}
           >
-            فست فود
+             اسپرسو بار
           </div>
         )}
       </SwiperSlide>
@@ -102,7 +101,7 @@ function Slider({ selectedValue, onSelectionChange }) {
             tabIndex="0"
             onClick={() => handleClick(focusedIndex)}
           >
-            نوشیدنی های سرد
+            ماکتیل
           </div>
         )}
       </SwiperSlide>
@@ -114,6 +113,69 @@ function Slider({ selectedValue, onSelectionChange }) {
               isActive ? "swiper-slide-active      " : "  "
             } flex justify-center items-center`}
             onFocus={() => handleSlideFocus(3)}
+            onBlur={handleSlideBlur}
+            tabIndex="0"
+            onClick={() => handleClick(focusedIndex)}
+          >
+           چای و دمنوش
+          </div>
+        )}
+      </SwiperSlide>
+
+      <SwiperSlide>
+        {({ isActive }) => (
+          <div
+            className={` rounded-xl w-full outline-none  text-sm h-[56px] bg-yellow-50  ${
+              isActive ? "swiper-slide-active      " : "  "
+            } flex justify-center items-center`}
+            onFocus={() => handleSlideFocus(4)}
+            onBlur={handleSlideBlur}
+            tabIndex="0"
+            onClick={() => handleClick(focusedIndex)}
+          >
+            ابمیوه طبیعی
+          </div>
+        )}
+      </SwiperSlide>
+
+      <SwiperSlide>
+        {({ isActive }) => (
+          <div
+            className={` rounded-xl w-full outline-none  text-sm h-[56px] bg-yellow-50  ${
+              isActive ? "swiper-slide-active      " : "  "
+            } flex justify-center items-center`}
+            onFocus={() => handleSlideFocus(5)}
+            onBlur={handleSlideBlur}
+            tabIndex="0"
+            onClick={() => handleClick(focusedIndex)}
+          >
+            شیک
+          </div>
+        )}
+      </SwiperSlide>
+      <SwiperSlide>
+        {({ isActive }) => (
+          <div
+            className={` rounded-xl w-full outline-none  text-sm h-[56px] bg-yellow-50  ${
+              isActive ? "swiper-slide-active      " : "  "
+            } flex justify-center items-center`}
+            onFocus={() => handleSlideFocus(6)}
+            onBlur={handleSlideBlur}
+            tabIndex="0"
+            onClick={() => handleClick(focusedIndex)}
+          >
+            دمی بار
+          </div>
+        )}
+      </SwiperSlide>
+
+      <SwiperSlide>
+        {({ isActive }) => (
+          <div
+            className={` rounded-xl w-full outline-none  text-sm h-[56px] bg-yellow-50  ${
+              isActive ? "swiper-slide-active      " : "  "
+            } flex justify-center items-center`}
+            onFocus={() => handleSlideFocus(7)}
             onBlur={handleSlideBlur}
             tabIndex="0"
             onClick={() => handleClick(focusedIndex)}
